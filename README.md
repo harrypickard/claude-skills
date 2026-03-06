@@ -22,3 +22,11 @@ Then invoke with `/skill-name` in Claude Code.
 |-------|--------|-------------|
 | `data_dict_convert` | `/data_dict_convert path/to/codebook.pdf` | Converts a PDF data dictionary or codebook into a searchable `.md` file. Splits the PDF, extracts all text verbatim, prepends a human-readable intro header, then cleans up. Useful for large survey codebooks (e.g. BES, BHPS, Understanding Society) that you want to query with Grep across sessions. |
 | `split-pdf` | `/split-pdf path/or/search-query` | Downloads or locates an academic PDF, splits it into 4-page chunks, and reads it in batches of 3 (~12 pages at a time) to avoid context crashes. Produces structured reading notes covering research question, data, methods, findings, and replication feasibility. |
+
+## Templates
+
+These are not skills but drop-in configuration files for your project root.
+
+| Template | Location | Description |
+|----------|----------|-------------|
+| `CLAUDE.md` | `templates/CLAUDE.md` | A `CLAUDE.md` project template for empirical economics research, adapted from Scott Cunningham (Causal Inference). Covers estimation philosophy (design before results), project overview, identification strategy, key decisions log, dropped analyses, variable definitions, sample restrictions, and a Referee 2 audit protocol section for tracking replication correspondence. Copy to your project root and fill in the blanks. |
